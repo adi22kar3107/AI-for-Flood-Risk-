@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Flood Risk Detection — Maharashtra</title>
+    <meta name="description"
+        content="Real-time AI-powered flood risk detection and vulnerability map for Maharashtra districts, powered by live weather data.">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌊</span>
+            <span class="nav-title">Flood<span>Watch</span> MH</span>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link active">🗺 Live Map</a>
+            <a href="/forecast" class="nav-link">📅 7-Day Forecast</a>
+            <a href="/history" class="nav-link">📜 History & Safety</a>
+            <a href="/alerts" class="nav-link">🔔 Alerts</a>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span> Live Data
+        </div>
+    </nav>
+    <div class="app-container">
+
+        <!-- ── Sidebar ─────────────────────────────────────────────── -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">🌊</div>
+                <h2>Flood Risk <span>AI</span></h2>
+                <p class="sidebar-subtitle">Maharashtra Live Monitor</p>
+            </div>
+
+            <!-- Risk Legend Panel -->
+            <div class="control-panel glass-panel">
+                <h3>Risk Zone Legend</h3>
+                <div class="map-legend" style="border-top: none; padding-top: 0; margin-top: 0.5rem;">
+                    <div class="legend-item">
+                        <span class="legend-dot high"></span>
+                        <div>
+                            <strong>High Risk</strong> (&gt;70%)
+                            <p>Immediate action required</p>
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot moderate"></span>
+                        <div>
+                            <strong>Moderate Risk</strong> (30–70%)
+                            <p>Monitor closely</p>
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot low"></span>
+                        <div>
+                            <strong>Low Risk</strong> (&lt;30%)
+                            <p>Conditions stable</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Districts Directory -->
+            <div class="districts-panel glass-panel">
+                <h3>Districts Directory</h3>
+                <div class="search-box">
+                    <input type="text" id="districtSearch" placeholder="🔍 Search district..." autocomplete="off">
+                </div>
+                <div id="districtsList" class="districts-list">
+                    <div class="districts-placeholder">Loading districts...</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ── Main Map Area ─────────────────────────────────────────── -->
+        <main class="main-content">
+            <header class="map-header">
+                <div class="map-header-left">
+                    <h1>Maharashtra Flood Risk Map</h1>
+                    <p>Live vulnerability data from <strong>28 districts</strong> — powered by Open-Meteo weather API
+                        &amp; AI model</p>
+                </div>
+                <div id="statsBar" class="stats-bar">
+                    <!-- Filled dynamically by JS -->
+                    <div class="stat-chip avg-chip">Loading data…</div>
+                </div>
+            </header>
+
+            <div id="map-container" class="map-wrapper glass-panel">
+                <!-- Map loading overlay -->
+                <div id="mapLoadingOverlay" class="map-loading-overlay hidden">
+                    <div class="map-spinner"></div>
+                    <span>Fetching live weather…</span>
+                </div>
+                <div id="map"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

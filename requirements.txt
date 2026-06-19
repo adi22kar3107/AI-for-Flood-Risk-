@@ -1,0 +1,5 @@
+Flask - server hosting 
+pandas - data 
+scikit-learn - ai model training
+joblib - data caching, parallel computing
+requests

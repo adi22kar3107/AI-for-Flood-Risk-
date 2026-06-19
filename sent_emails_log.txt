@@ -1,0 +1,212 @@
+================================================================================
+TIMESTAMP: 2026-06-19 12:16:16
+TO: verification_test@example.com
+FROM: floodrisknotification@gmail.com
+SUBJECT: 🧪 Test Flood Alert - FloodWatch MH
+STATUS: SIMULATED (No SMTP credentials or connection failed)
+================================================================================
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Maharashtra Flood Risk Alert</title>
+    </head>
+    <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #080e1a; color: #e2e8f0;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; margin: 30px auto; background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
+            <!-- Header -->
+            <tr>
+                <td align="center" style="padding: 30px 20px; background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                    <span style="font-size: 40px; line-height: 1;">🌊</span>
+                    <h1 style="margin: 10px 0 0 0; font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px;">
+                        Flood<span style="color: #3b82f6;">Watch</span> MH
+                    </h1>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #94a3b8;">Daily Morning Risk Intelligence Summary</p>
+                </td>
+            </tr>
+            <!-- Content -->
+            <tr>
+                <td style="padding: 30px 24px;">
+                    
+        <div style="background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 20px; color: #3b82f6; font-size: 13px;">
+            🧪 <strong>Test Email Successful:</strong> This is a test email sent from the FloodWatch MH system to verify your settings.
+        </div>
+        
+                    <p style="font-size: 16px; margin-top: 0;">Hello <strong>Inspector Verification</strong>,</p>
+                    <p style="font-size: 14px; line-height: 1.5; color: #94a3b8;">
+                        Here is the live flood risk notification for <strong>19 June 2026</strong>. Our system has detected active 
+                        <strong style="color: #ef4444;">High (Red)</strong> or <strong style="color: #f59e0b;">Moderate (Orange)</strong> alert conditions in the following Maharashtra districts:
+                    </p>
+                    
+                    <table width="100%" cellpadding="0" cellspacing="0" style="margin: 20px 0; text-align: left; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #3b82f6;">
+                                <th style="padding: 10px 8px; color: #94a3b8; font-size: 12px; text-transform: uppercase;">District</th>
+                                <th style="padding: 10px 8px; color: #94a3b8; font-size: 12px; text-transform: uppercase;">Alert Level</th>
+                                <th style="padding: 10px 8px; color: #94a3b8; font-size: 12px; text-transform: uppercase;">Risk Score</th>
+                                <th style="padding: 10px 8px; color: #94a3b8; font-size: 12px; text-transform: uppercase;">Weather</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr style="border-bottom: 1px solid #1e293b;">
+            <td style="padding: 12px 8px; font-weight: 600; color: #ffffff;">Mumbai</td>
+            <td style="padding: 12px 8px;">
+                <span style="display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #ef4444; background-color: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3);">
+                    High
+                </span>
+            </td>
+            <td style="padding: 12px 8px; font-weight: 700; color: #ef4444;">78.5%</td>
+            <td style="padding: 12px 8px; color: #94a3b8; font-size: 13px;">
+                🌧️ 125.0 mm<br/>
+                🏞️ 4.5 m
+            </td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid #1e293b;">
+            <td style="padding: 12px 8px; font-weight: 600; color: #ffffff;">Kolhapur</td>
+            <td style="padding: 12px 8px;">
+                <span style="display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #f59e0b; background-color: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3);">
+                    Moderate
+                </span>
+            </td>
+            <td style="padding: 12px 8px; font-weight: 700; color: #f59e0b;">52.3%</td>
+            <td style="padding: 12px 8px; color: #94a3b8; font-size: 13px;">
+                🌧️ 65.0 mm<br/>
+                🏞️ 3.8 m
+            </td>
+        </tr>
+        
+                        </tbody>
+                    </table>
+                    
+                    <p style="font-size: 14px; line-height: 1.5; color: #94a3b8; margin-top: 25px;">
+                        Please monitor low-lying areas, keep emergency helplines ready, and follow advice from local authorities.
+                    </p>
+                    
+                    <!-- Call to Action -->
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 30px auto 10px;">
+                        <tr>
+                            <td align="center" style="background-color: #3b82f6; border-radius: 8px;">
+                                <a href="http://localhost:5000/" target="_blank" style="display: inline-block; padding: 12px 24px; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 700; border-radius: 8px; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.45);">
+                                    🗺️ View Live Risk Map
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Footer -->
+            <tr>
+                <td style="padding: 24px; background-color: #0b0f19; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-size: 12px; color: #64748b;">
+                    <p style="margin: 0 0 10px 0;">You received this alert because you are signed up for morning notifications on FloodWatch MH.</p>
+                    <p style="margin: 0;">
+                        To change your preferences or unsubscribe, please <a href="http://localhost:5000/alerts" target="_blank" style="color: #3b82f6; text-decoration: none;">manage notifications here</a>.
+                    </p>
+                    <p style="margin: 15px 0 0 0; opacity: 0.5;">© 2026 FloodWatch MH. All rights reserved.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+    </html>
+    
+
+================================================================================
+TIMESTAMP: 2026-06-19 12:25:45
+TO: adi22kar3107@gmail.com
+FROM: floodrisknotification@gmail.com
+SUBJECT: 🧪 Test Flood Alert - FloodWatch MH
+STATUS: SIMULATED (No SMTP credentials or connection failed)
+================================================================================
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Maharashtra Flood Risk Alert</title>
+    </head>
+    <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #080e1a; color: #e2e8f0;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; margin: 30px auto; background-color: #0f172a; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
+            <!-- Header -->
+            <tr>
+                <td align="center" style="padding: 30px 20px; background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                    <span style="font-size: 40px; line-height: 1;">🌊</span>
+                    <h1 style="margin: 10px 0 0 0; font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px;">
+                        Flood<span style="color: #3b82f6;">Watch</span> MH
+                    </h1>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #94a3b8;">Daily Morning Risk Intelligence Summary</p>
+                </td>
+            </tr>
+            <!-- Content -->
+            <tr>
+                <td style="padding: 30px 24px;">
+                    
+        <div style="background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 20px; color: #3b82f6; font-size: 13px;">
+            🧪 <strong>Test Email Successful:</strong> This is a test email sent from the FloodWatch MH system to verify your settings.
+        </div>
+        
+                    <p style="font-size: 16px; margin-top: 0;">Hello <strong>Aditya Baviskar</strong>,</p>
+                    <p style="font-size: 14px; line-height: 1.5; color: #94a3b8;">
+                        Here is the live flood risk notification for <strong>19 June 2026</strong>. Our system has detected active 
+                        <strong style="color: #ef4444;">High (Red)</strong> or <strong style="color: #f59e0b;">Moderate (Orange)</strong> alert conditions in the following Maharashtra districts:
+                    </p>
+                    
+                    <table width="100%" cellpadding="0" cellspacing="0" style="margin: 20px 0; text-align: left; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #3b82f6;">
+                                <th style="padding: 10px 8px; color: #94a3b8; font-size: 12px; text-transform: uppercase;">District</th>
+                                <th style="padding: 10px 8px; color: #94a3b8; font-size: 12px; text-transform: uppercase;">Alert Level</th>
+                                <th style="padding: 10px 8px; color: #94a3b8; font-size: 12px; text-transform: uppercase;">Risk Score</th>
+                                <th style="padding: 10px 8px; color: #94a3b8; font-size: 12px; text-transform: uppercase;">Weather</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr style="border-bottom: 1px solid #1e293b;">
+            <td style="padding: 12px 8px; font-weight: 600; color: #ffffff;">Ratnagiri</td>
+            <td style="padding: 12px 8px;">
+                <span style="display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #f59e0b; background-color: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3);">
+                    Moderate
+                </span>
+            </td>
+            <td style="padding: 12px 8px; font-weight: 700; color: #f59e0b;">30.8%</td>
+            <td style="padding: 12px 8px; color: #94a3b8; font-size: 13px;">
+                🌧️ 0.2 mm<br/>
+                🏞️ 2.11 m
+            </td>
+        </tr>
+        
+                        </tbody>
+                    </table>
+                    
+                    <p style="font-size: 14px; line-height: 1.5; color: #94a3b8; margin-top: 25px;">
+                        Please monitor low-lying areas, keep emergency helplines ready, and follow advice from local authorities.
+                    </p>
+                    
+                    <!-- Call to Action -->
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 30px auto 10px;">
+                        <tr>
+                            <td align="center" style="background-color: #3b82f6; border-radius: 8px;">
+                                <a href="http://localhost:5000/" target="_blank" style="display: inline-block; padding: 12px 24px; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 700; border-radius: 8px; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.45);">
+                                    🗺️ View Live Risk Map
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Footer -->
+            <tr>
+                <td style="padding: 24px; background-color: #0b0f19; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-size: 12px; color: #64748b;">
+                    <p style="margin: 0 0 10px 0;">You received this alert because you are signed up for morning notifications on FloodWatch MH.</p>
+                    <p style="margin: 0;">
+                        To change your preferences or unsubscribe, please <a href="http://localhost:5000/alerts" target="_blank" style="color: #3b82f6; text-decoration: none;">manage notifications here</a>.
+                    </p>
+                    <p style="margin: 15px 0 0 0; opacity: 0.5;">© 2026 FloodWatch MH. All rights reserved.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+    </html>
+    
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7-Day Flood Forecast — FloodWatch MH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/forecast.css" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌊</span>
+            <span class="nav-title">Flood<span>Watch</span> MH</span>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">🗺 Live Map</a>
+            <a href="/forecast" class="nav-link active">📅 7-Day Forecast</a>
+            <a href="/history" class="nav-link">📜 History & Safety</a>
+            <a href="/alerts" class="nav-link">🔔 Alerts</a>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span> Live Data
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Maharashtra Flood Intelligence System
+            </div>
+            <h1 class="hero-title">
+                7-Day Flood Risk<br />
+                <span class="gradient-text">Forecast Engine</span>
+            </h1>
+            <p class="hero-sub">Enter any district or city in Maharashtra to get a day-by-day flood risk prediction
+                powered by real-time weather data and ML risk modelling.</p>
+
+            <div class="search-container">
+                <div class="search-wrap">
+                    <div class="search-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                    </div>
+                    <input type="text" id="cityInput" placeholder="Search city… e.g. Pune, Kolhapur, Nashik"
+                        autocomplete="off" />
+                    <button id="forecastBtn" class="forecast-btn">
+                        <span id="btnText">Get Forecast</span>
+                        <svg id="btnIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                        <div id="btnSpinner" class="btn-spinner hidden"></div>
+                    </button>
+                </div>
+                <div id="suggestions" class="suggestions hidden"></div>
+                <p id="searchError" class="search-error hidden">⚠ City not found. Try a different name.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="forecastSection" class="forecast-section hidden">
+        <div class="city-summary-bar">
+            <div class="csb-left">
+                <span class="csb-icon">📍</span>
+                <div>
+                    <h2 id="cityName" class="csb-city">—</h2>
+                    <p class="csb-meta">Maharashtra · Next 7 Days</p>
+                </div>
+            </div>
+            <div class="csb-chips" id="summaryChips"></div>
+            <div class="csb-right">
+                <span id="overallBadge" class="overall-badge">—</span>
+            </div>
+        </div>
+
+        <div class="forecast-grid" id="forecastGrid"></div>
+
+        <div class="chart-section">
+            <div class="chart-header">
+                <h3>Risk Trend Over 7 Days</h3>
+                <div class="chart-legend">
+                    <span class="leg-item"><span class="leg-dot high"></span> High</span>
+                    <span class="leg-item"><span class="leg-dot moderate"></span> Moderate</span>
+                    <span class="leg-item"><span class="leg-dot low"></span> Low</span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="riskChart"></canvas>
+            </div>
+        </div>
+
+        <div class="detail-table-section">
+            <h3>Detailed Weather Parameters</h3>
+            <div class="table-wrap">
+                <table class="detail-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>🌧 Rain (mm)</th>
+                            <th>🌡 Temp (°C)</th>
+                            <th>💧 Humidity (%)</th>
+                            <th>🏞 River Level (m)</th>
+                            <th>🌱 Soil Moisture (%)</th>
+                            <th>💨 Wind (km/h)</th>
+                            <th>Risk %</th>
+                            <th>Severity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="recommendationPanel" class="recommendation-panel"></div>
+    </section>
+
+    <div id="emptyState" class="empty-state">
+        <div class="empty-icon">🗺️</div>
+        <h3>Search for a city to begin</h3>
+        <p>Get AI-powered, 7-day flood risk forecasts for any district in Maharashtra</p>
+        <div class="quick-cities">
+            <span class="qc-label">Quick picks:</span>
+            <button class="qc-btn" onclick="quickSearch('Mumbai')">Mumbai</button>
+            <button class="qc-btn" onclick="quickSearch('Pune')">Pune</button>
+            <button class="qc-btn" onclick="quickSearch('Kolhapur')">Kolhapur</button>
+            <button class="qc-btn" onclick="quickSearch('Nashik')">Nashik</button>
+            <button class="qc-btn" onclick="quickSearch('Nagpur')">Nagpur</button>
+        </div>
+    </div>
+
+    <script src="/static/js/forecast.js"></script>
+</body>
+
+</html>

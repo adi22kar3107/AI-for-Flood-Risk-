@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flood History & Safety Guide — FloodWatch MH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/history.css" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌊</span>
+            <span class="nav-title">Flood<span>Watch</span> MH</span>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">🗺 Live Map</a>
+            <a href="/forecast" class="nav-link">📅 7-Day Forecast</a>
+            <a href="/history" class="nav-link active">📜 History & Safety</a>
+            <a href="/alerts" class="nav-link">🔔 Alerts</a>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span> Live Data
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="history-hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Historical Data & Resilience Guidelines
+            </div>
+            <h1 class="hero-title">
+                Maharashtra Flood History<br />
+                <span class="gradient-text">&amp; Safety Guide</span>
+            </h1>
+            <p class="hero-sub">Understand past occurrences to build a safer future. Explore historical records, 
+                emergency actions, and structural mitigation strategies for Maharashtra.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <div class="content-container">
+
+        <!-- 1. Maharashtra Flood History Timeline -->
+        <section class="timeline-section">
+            <div class="section-header">
+                <span class="section-icon">📜</span>
+                <h2>Major Historical Floods in Maharashtra</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- 2005 Floods -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-year">2005</span>
+                            <span class="timeline-location">Mumbai & Konkan</span>
+                        </div>
+                        <h3 class="timeline-title">The Great July 2005 Cloudburst</h3>
+                        <p class="timeline-desc">An unprecedented cloudburst dropped 944 mm of rain on Mumbai in a single day (July 26), 
+                            completely paralyzing the state capital and surrounding areas. Low-lying areas, particularly along the Mithi River, 
+                            were submerged under several feet of water due to choked drainage systems and high tides.</p>
+                        <div class="timeline-stats">
+                            <span class="t-stat">🌧️ 24h Rain: <strong>944 mm</strong></span>
+                            <span class="t-stat">📉 Casualties: <strong>1,000+ statewide</strong></span>
+                            <span class="t-stat">🔧 Outages: <strong>Complete Power & Transit blackout</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2019 Floods -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-year">2019</span>
+                            <span class="timeline-location">Western Maharashtra</span>
+                        </div>
+                        <h3 class="timeline-title">Krishna River Basin Overflow</h3>
+                        <p class="timeline-desc">Heavy monsoon rains coupled with the release of excess water from Koyna and Radhanagari dams 
+                            led to catastrophic flooding in Kolhapur, Sangli, Satara, and Pune districts. The floodwaters took over a week to recede, 
+                            displacing hundreds of thousands of people and destroying cash crops like sugarcane.</p>
+                        <div class="timeline-stats">
+                            <span class="t-stat">🌊 River Basin: <strong>Krishna, Panchganga</strong></span>
+                            <span class="t-stat">📦 Evacuated: <strong>4.5 Lakh+ people</strong></span>
+                            <span class="t-stat">🚜 Impact: <strong>Severe agricultural damage</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2021 Floods -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-year">2021</span>
+                            <span class="timeline-location">Konkan & Western Ghats</span>
+                        </div>
+                        <h3 class="timeline-title">Konkan Landslides & Flash Floods</h3>
+                        <p class="timeline-desc">Extremely heavy monsoon rainfall caused severe landslides and rapid flooding in the Konkan region. 
+                            Chiplun town in Ratnagiri was almost completely submerged, with water reaching up to 15 feet. 
+                            Major landslides occurred in Taliye village (Raigad) and parts of Satara, burying homes.</p>
+                        <div class="timeline-stats">
+                            <span class="t-stat">🌧️ Peak Rain: <strong>485 mm in 24h</strong></span>
+                            <span class="t-stat">⛰️ Disaster Type: <strong>Landslides & Urban Inundation</strong></span>
+                            <span class="t-stat">📍 Worst Hit: <strong>Chiplun, Mahad, Taliye</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2023 Floods -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-year">2023</span>
+                            <span class="timeline-location">Nagpur & Vidarbha</span>
+                        </div>
+                        <h3 class="timeline-title">Nagpur Urban Flash Floods</h3>
+                        <p class="timeline-desc">A sudden cloudburst during the early morning hours caused severe flooding across Nagpur city. 
+                            Over 100 mm of rain fell in under 4 hours, causing the Ambazari lake to overflow, which inundated adjacent residential zones. 
+                            This event highlighted the increasing vulnerability of major urban centers to localized weather events.</p>
+                        <div class="timeline-stats">
+                            <span class="t-stat">⚡ Trigger: <strong>Early morning cloudburst</strong></span>
+                            <span class="t-stat">🌧️ Intensity: <strong>109 mm in 4 hours</strong></span>
+                            <span class="t-stat">💧 Water Body: <strong>Ambazari Lake Overflow</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Safety Guidelines Dashboard -->
+        <section class="safety-section">
+            <div class="section-header">
+                <span class="section-icon">🛡️</span>
+                <h2>Flood Emergency & Safety Measures</h2>
+            </div>
+
+            <!-- Tabs -->
+            <div class="safety-tabs">
+                <button class="safety-tab active" data-phase="before" onclick="switchPhase('before')">🟠 Before Flood</button>
+                <button class="safety-tab" data-phase="during" onclick="switchPhase('during')">🔴 During Flood</button>
+                <button class="safety-tab" data-phase="after" onclick="switchPhase('after')">🟢 After Flood</button>
+            </div>
+
+            <!-- Tab 1: Before -->
+            <div id="panel-before" class="safety-panel panel-before active">
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">🎒</span>
+                        <h3 class="safety-card-title">Prepare an Emergency Kit</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>Store dry rations, non-perishable food, and drinking water for at least 3-5 days.</li>
+                        <li>Keep essential medications, first-aid kits, and prescriptions handy.</li>
+                        <li>Prepare a power bank, flashlights, extra batteries, and a battery-powered radio.</li>
+                        <li>Store important physical documents (ID cards, deeds) in waterproof bags.</li>
+                    </ul>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">🏠</span>
+                        <h3 class="safety-card-title">Secure Your Property</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>Install check valves or drain plugs in plumbing to prevent backup of floodwaters.</li>
+                        <li>Clear blockages in the neighborhood storm drains and clean gutters around your house.</li>
+                        <li>Elevate critical household appliances, furniture, and electric boards off the floor.</li>
+                        <li>Identify the highest point in your house or immediate neighborhood for quick retreats.</li>
+                    </ul>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">📢</span>
+                        <h3 class="safety-card-title">Stay Informed & Alert</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>Sign up for local weather warning text alerts and track Indian Meteorological Department (IMD) bulletins.</li>
+                        <li>Keep emergency helpline numbers saved on your phone and written down.</li>
+                        <li>Plan evacuation routes to nearby rescue shelters or taller community buildings.</li>
+                        <li>Teach all family members how and when to shut off the gas, water, and main electricity switches.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab 2: During -->
+            <div id="panel-during" class="safety-panel panel-during">
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">⚠️</span>
+                        <h3 class="safety-card-title">Evacuate Immediately</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>If authorities declare evacuation protocols, leave your premises immediately. Do not delay.</li>
+                        <li>Shut off main power grids and gas cylinders before locking up your house.</li>
+                        <li>Travel along designated evacuation paths. Do not take shortcuts through unfamiliar paths.</li>
+                        <li>Move pets to secure elevations and release livestock from enclosures.</li>
+                    </ul>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">🚷</span>
+                        <h3 class="safety-card-title">Avoid Moving Waters</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>Do not walk, swim, or drive through moving water. Just 6 inches of fast water can knock you down.</li>
+                        <li>Avoid driving onto flooded roads. Vehicles can easily float away in 1-2 feet of water.</li>
+                        <li>If your vehicle stalls in rapidly rising water, abandon it immediately and seek higher ground.</li>
+                        <li>Stay clear of riverbanks, bridges over high currents, and open stormwater drains.</li>
+                    </ul>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">⚡</span>
+                        <h3 class="safety-card-title">Electrical & Health Risks</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>Never touch electrical equipment if you are wet, standing in water, or near fallen power lines.</li>
+                        <li>Avoid walking through floodwater with open wounds, as it contains chemical runoff and sewage.</li>
+                        <li>Do not consume any food that has come in contact with floodwaters.</li>
+                        <li>Drink only bottled, boiled, or chemically treated water during active emergency events.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab 3: After -->
+            <div id="panel-after" class="safety-panel panel-after">
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">🔍</span>
+                        <h3 class="safety-card-title">Inspect Before Entering</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>Do not return home until emergency officials state it is safe to do so.</li>
+                        <li>Inspect the foundation, walls, and roof structure for physical damage before entering.</li>
+                        <li>Do not turn on electrical systems if you smell gas or if electrical wiring was submerged.</li>
+                        <li>Photograph property damage to help with eventual insurance claims and disaster relief.</li>
+                    </ul>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">🧼</span>
+                        <h3 class="safety-card-title">Sanitize & Clean</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>Clean and disinfect everything that got wet. Submerged silt contains biological pathogens.</li>
+                        <li>Discard dry food, medicine, and cosmetics that touched floodwater.</li>
+                        <li>Wear heavy rubber gloves and boots while clearing mud and sanitizing surfaces.</li>
+                        <li>Be on the lookout for reptiles or rodents that may have entered building interiors for dry shelter.</li>
+                    </ul>
+                </div>
+                <div class="safety-card">
+                    <div class="safety-card-header">
+                        <span class="safety-card-icon">📈</span>
+                        <h3 class="safety-card-title">Monitor Health & Disease</h3>
+                    </div>
+                    <ul class="safety-list">
+                        <li>Watch for signs of waterborne diseases (cholera, typhoid) and vector diseases (dengue, malaria).</li>
+                        <li>Ensure stagnant water pools around your property are drained or treated to prevent mosquito breeding.</li>
+                        <li>Maintain personal hygiene and wash hands thoroughly with clean water and soap.</li>
+                        <li>Seek immediate medical help at relief centers if you show symptoms of fever or skin infections.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Emergency Helpline Center -->
+        <section class="helpline-section">
+            <div class="section-header">
+                <span class="section-icon">📞</span>
+                <h2>Emergency Helpline Directory</h2>
+            </div>
+            <div class="helpline-grid">
+                <div class="helpline-card">
+                    <span class="helpline-title">State Disaster Management</span>
+                    <span class="helpline-num">022-22027990</span>
+                    <p class="helpline-desc">Maharashtra State Emergency Operations Center (SEOC) Control Room.</p>
+                </div>
+                <div class="helpline-card">
+                    <span class="helpline-title">National Emergency Response</span>
+                    <span class="helpline-num">108</span>
+                    <p class="helpline-desc">Statewide toll-free medical and emergency service hotline.</p>
+                </div>
+                <div class="helpline-card">
+                    <span class="helpline-title">NDRF Control Room</span>
+                    <span class="helpline-num">011-24363260</span>
+                    <p class="helpline-desc">National Disaster Response Force HQ operational helpline.</p>
+                </div>
+                <div class="helpline-card">
+                    <span class="helpline-title">District Helpline</span>
+                    <span class="helpline-num">1077</span>
+                    <p class="helpline-desc">Toll-free district disaster management connection (use when in local distress).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Long-Term Mitigation Strategies -->
+        <section class="mitigation-section">
+            <div class="section-header" style="border: none; margin-bottom: 0.5rem;">
+                <span class="section-icon">🏗️</span>
+                <h2>Long-Term Flood Mitigation & Planning</h2>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; max-width: 800px;">
+                Mitigating flood risks requires a combination of structural engineering, urban planning, and ecological restoration. 
+                Below are the key initiatives for long-term flood resilience:
+            </p>
+            <div class="mitigation-grid">
+                <div class="mitigation-item">
+                    <div class="mitigation-badge">🌧️</div>
+                    <div class="mitigation-text">
+                        <h4>Sponge City Infrastructure</h4>
+                        <p>Designing urban areas with permeable pavements, rain gardens, and green roofs that absorb rainfall rather than turning it into immediate runoff.</p>
+                    </div>
+                </div>
+                <div class="mitigation-item">
+                    <div class="mitigation-badge">⛰️</div>
+                    <div class="mitigation-text">
+                        <h4>River Embankment & De-silting</h4>
+                        <p>Regularly dredging major riverbeds (like Mithi, Panchganga) to restore original depth, alongside constructing reinforced concrete retaining walls.</p>
+                    </div>
+                </div>
+                <div class="mitigation-item">
+                    <div class="mitigation-badge">🛰️</div>
+                    <div class="mitigation-text">
+                        <h4>Real-Time Sensor Networks</h4>
+                        <p>Installing telemetry level sensors on upstream dams and river gauges to automatically warn municipal systems of incoming volumes hours in advance.</p>
+                    </div>
+                </div>
+                <div class="mitigation-item">
+                    <div class="mitigation-badge">🌳</div>
+                    <div class="mitigation-text">
+                        <h4>Mangrove & Forest Restoration</h4>
+                        <p>Protecting Konkan mangroves and planting native deep-rooted trees along mountain slopes to anchor soil and prevent landslides during high-intensity monsoons.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <footer class="footer-disclaimer">
+            <p>Disclaimer: This portal is an educational and predictive demonstration system. 
+                Always prioritize warnings, orders, and advisories issued by the Maharashtra State Disaster Management Authority (SDMA) 
+                and official emergency personnel during active flood events.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.5;">© 2026 FloodWatch MH. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- Script to toggle safety tabs -->
+    <script>
+        function switchPhase(phase) {
+            // Remove active classes
+            document.querySelectorAll('.safety-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.safety-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            // Add active classes to selected
+            const activeTab = document.querySelector(`.safety-tab[data-phase="${phase}"]`);
+            const activePanel = document.getElementById(`panel-${phase}`);
+
+            if (activeTab && activePanel) {
+                activeTab.classList.add('active');
+                activePanel.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

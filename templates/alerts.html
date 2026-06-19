@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts Notification — FloodWatch MH</title>
+    <meta name="description" content="Sign up to receive daily morning email notifications whenever active flood risks are detected in Maharashtra.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/alerts.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">🌊</span>
+            <span class="nav-title">Flood<span>Watch</span> MH</span>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">🗺 Live Map</a>
+            <a href="/forecast" class="nav-link">📅 7-Day Forecast</a>
+            <a href="/history" class="nav-link">📜 History &amp; Safety</a>
+            <a href="/alerts" class="nav-link active">🔔 Alerts</a>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span> Live Data
+        </div>
+    </nav>
+
+    <div class="alerts-container">
+        <div class="hero-bg-grid"></div>
+
+        <!-- Toast -->
+        <div id="toast" class="toast hidden">
+            <span id="toastIcon" class="toast-icon">ℹ️</span>
+            <span id="toastMessage" class="toast-text">Message goes here</span>
+        </div>
+
+        <!-- Main Card -->
+        <main class="alert-card glass-panel" id="alertCard">
+
+            <!-- Loading -->
+            <div id="cardLoader" class="card-loader">
+                <div class="spinner"></div>
+                <p>Checking status...</p>
+            </div>
+
+            <!-- ── LOGGED OUT VIEW ── -->
+            <div id="loggedOutView" class="view-panel hidden">
+                <div class="card-header">
+                    <div class="alert-bell-icon">🔔</div>
+                    <h2>Stay Ahead of <span>Floods</span></h2>
+                    <p>Register with your name and email to receive daily morning flood alert notifications for Maharashtra.</p>
+                </div>
+
+                <form id="loginForm" class="alert-form" onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <label for="userName">Full Name</label>
+                        <div class="input-wrap">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="userName" placeholder="Enter your name" required autocomplete="name">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="userEmail">Your Email Address</label>
+                        <div class="input-wrap">
+                            <span class="input-icon">📧</span>
+                            <input type="email" id="userEmail" placeholder="Enter your email ID" required autocomplete="email">
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn" id="loginSubmitBtn">
+                        <span>Subscribe &amp; Setup Alerts</span>
+                        <div class="btn-spinner hidden" id="loginSpinner"></div>
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    <p>📧 Alerts are sent from <strong>floodrisknotification@gmail.com</strong> every morning at 8:00 AM when Orange or Red risk is detected.</p>
+                </div>
+            </div>
+
+            <!-- ── LOGGED IN VIEW ── -->
+            <div id="loggedInView" class="view-panel hidden">
+                <div class="card-header">
+                    <div class="dashboard-avatar">👤</div>
+                    <h2>Welcome, <span id="displayName">User</span>!</h2>
+                    <p class="user-subinfo" id="displayEmail">user@example.com</p>
+                </div>
+
+                <div class="dashboard-controls">
+
+                    <!-- ── SMTP STATUS BANNER (shown when not configured) ── -->
+                    <div id="smtpWarningBanner" class="smtp-warning hidden">
+                        <div class="smtp-warning-icon">⚠️</div>
+                        <div class="smtp-warning-text">
+                            <strong>Gmail App Password not set</strong>
+                            <p>Alerts are currently saved to a local log file. Enter your Gmail App Password below to receive real emails.</p>
+                        </div>
+                    </div>
+
+                    <!-- ── SMTP SETUP CARD ── -->
+                    <div id="smtpSetupCard" class="smtp-setup-card hidden">
+                        <div class="smtp-setup-header">
+                            <span class="smtp-lock-icon">🔑</span>
+                            <div>
+                                <h4>Configure Gmail App Password</h4>
+                                <p>Enter the 16-character App Password for <strong>floodrisknotification@gmail.com</strong></p>
+                            </div>
+                        </div>
+                        <div class="smtp-input-row">
+                            <div class="input-wrap smtp-input-wrap">
+                                <input type="password" id="smtpPasswordInput" placeholder="xxxx xxxx xxxx xxxx" autocomplete="off" maxlength="32">
+                                <button type="button" class="smtp-eye-btn" onclick="toggleSmtpPasswordVisibility()" title="Show/Hide">👁</button>
+                            </div>
+                            <button class="smtp-save-btn" id="smtpSaveBtn" onclick="saveSmtpPassword()">
+                                <span>Save</span>
+                                <div class="btn-spinner hidden" id="smtpSaveSpinner"></div>
+                            </button>
+                        </div>
+                        <div class="smtp-help">
+                            <details>
+                                <summary>How to get a Gmail App Password?</summary>
+                                <ol>
+                                    <li>Go to <a href="https://myaccount.google.com/security" target="_blank">myaccount.google.com/security</a></li>
+                                    <li>Enable <strong>2-Step Verification</strong> if not already on.</li>
+                                    <li>Search for <strong>App passwords</strong> in the search bar.</li>
+                                    <li>Click <strong>App passwords</strong>, choose a name (e.g. "FloodWatch"), click <strong>Create</strong>.</li>
+                                    <li>Copy the 16-character code and paste it above.</li>
+                                </ol>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- ── SMTP CONFIGURED BADGE ── -->
+                    <div id="smtpConfiguredBadge" class="smtp-configured-badge hidden">
+                        <span>✅ Gmail connected — emails will be sent directly to subscribers</span>
+                    </div>
+
+                    <!-- Notification Toggle -->
+                    <div class="toggle-card">
+                        <div class="toggle-details">
+                            <h3>Morning Alert Emails</h3>
+                            <p>Toggle to start or stop receiving daily 8 AM flood risk notifications.</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="switch">
+                                <input type="checkbox" id="alertToggle" onchange="handleToggleChange(this)">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Status Badge -->
+                    <div class="status-indicator" id="statusIndicator">
+                        <span class="status-badge active" id="activeBadge">🟢 Subscribed to Daily Alerts</span>
+                        <span class="status-badge muted" id="mutedBadge">🔴 Notifications Muted</span>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="actions-group">
+                        <button class="action-btn test-btn" id="testEmailBtn" onclick="triggerTestEmail()">
+                            <span>🧪 Send Test Alert Now</span>
+                            <div class="btn-spinner hidden" id="testSpinner"></div>
+                        </button>
+                        <button class="action-btn logout-btn" onclick="handleLogout()">
+                            <span>Log Out</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p>💡 Click "Send Test Alert Now" to verify your email delivery. Alerts fire daily at 8:00 AM when Moderate or High risk is detected.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/alerts.js"></script>
+</body>
+
+</html>
